@@ -1,20 +1,10 @@
 //add money Section functionality
-//elements
-const currentBalance = document.querySelector(".current-balance");
-const selectBank = document.querySelector(".select");
-const inputAddAccount = document.querySelector(".input-add-account");
-const inputAddAmount = document.querySelector(".input-add-amount");
-const inputAddPin = document.querySelector(".input-add-pin");
-const btnAddMoney = document.querySelector("#btn-add-money");
-
 btnAddMoney.addEventListener("click", function (e) {
   e.preventDefault();
 
   //for empty fields
-  if (!inputAddAccount.value || !inputAddAmount.value || !inputAddPin.value) {
-    alert(`Please fill up all the information`);
-    return;
-  }
+  if (!forEmptyFields(inputAddAccount, inputAddAmount, inputAddPin)) return;
+
   //account number less than 11
   if (inputAddAccount.value.length < 11) {
     alert(`Please provide valid account number`);
@@ -44,5 +34,9 @@ btnAddMoney.addEventListener("click", function (e) {
   document.querySelector(".current-balance").innerText =
     newCurrentBalance.toFixed(2);
 
+  // clear input fields
   clearInputFields(inputAddAccount, inputAddAmount, inputAddPin);
+
+  //successful message
+  alert("Add Money Successful!");
 });

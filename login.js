@@ -1,9 +1,4 @@
 //login button functionality
-//Elements
-const loginBtn = document.querySelector("#btn-login");
-const inputNumber = document.querySelector(".input-number");
-const inputPin = document.querySelector(".input-pin");
-//main functionality
 loginBtn.addEventListener("click", function (e) {
   e.preventDefault();
   if (
