@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Payoo Bank Home Page</title>
+  </head>
+  <body class="bg-[#f5f4f7] h-[100-vh]">
+    <section class="p-5 bg-white w-[450px] mx-auto mb-5">
+      <!-- nav bar -->
+      <div class="flex justify-between items-center pb-5 mb-5 border-b-1">
+        <div class="flex items-center">
+          <div>
+            <img src="./assets/Group.png" alt="" />
+          </div>
+          <div>
+            <h2 class="font-semibold text-3xl">
+              $<span class="current-balance">45000</span>
+            </h2>
+            <p>Available Balance</p>
+          </div>
+        </div>
+        <button class="logout btn">
+          <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+          Logout
+        </button>
+      </div>
+
+      <!-- details section -->
+      <div>
+        <h1 class="font-semibold text-2xl">🔥 Welcome to Payooo!</h1>
+        <p class="my-5">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and customer satisfaction is always high.
+        </p>
+      </div>
+
+      <!-- tabs -->
+      <div class="tabs">
+        <!-- operations buttons start -->
+        <div class="tab-container grid grid-cols-3 gap-2 mb-5">
+          <div
+            class="border border-1 btns__tab btns__tab--1 text-center p-2 w-full"
+            data-tab="1"
+          >
+            <img src="./assets/wallet1.png" alt="" class="mx-auto" />
+            Add Money
+          </div>
+          <div
+            class="border border-1 btns__tab btns__tab--2 text-center p-2 w-full"
+            data-tab="2"
+          >
+            <img src="./assets/send1.png" alt="" class="mx-auto" />
+            Cashout
+          </div>
+          <div
+            class="border border-1 btns__tab btns__tab--3 text-center p-2 w-full"
+            data-tab="3"
+          >
+            <img src="./assets/money1.png" alt="" class="mx-auto" />
+            Transfer Money
+          </div>
+          <div
+            class="border border-1 btns__tab btns__tab--4 text-center p-2 w-full"
+            data-tab="4"
+          >
+            <img src="./assets/bonus1.png" alt="" class="mx-auto" />
+            Get Bonus
+          </div>
+          <div
+            class="border border-1 btns__tab btns__tab--5 text-center p-2 w-full"
+            data-tab="5"
+          >
+            <img src="./assets/purse1.png" alt="" class="mx-auto" />
+            Pay Bill
+          </div>
+          <div
+            class="border border-1 btns__tab btns__tab--6 text-center p-2 w-full"
+            data-tab="6"
+          >
+            <img src="./assets/transaction1.png" alt="" class="mx-auto" />
+            Transactions
+          </div>
+        </div>
+        <!-- operations buttons end -->
+      </div>
+    </section>
+
+    <!-- tabs content -->
+    <section class="p-5 bg-white w-[450px] mx-auto">
+      <!-- add money Section start-->
+      <div class="mb-5">
+        <h2 class="font-semibold text-2xl mb-4">Add Money</h2>
+        <form action="">
+          <div>
+            <h3 class="font-medium">Select a Bank</h3>
+            <select class="select bg-[#f4f5f7] border-0 mt-2 w-full">
+              <option>Select a Bank</option>
+              <option>AB Bank</option>
+              <option>DBBL</option>
+              <option>Dutch Bangla</option>
+            </select>
+            <br />
+            <br />
+            <label class="font-semibold" for="number"
+              >Bank Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-account"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Amount to Add</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to add"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-amount"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-pin"
+              maxlength="4"
+            />
+            <br /><br />
+            <button
+              type="submit"
+              class="btn btn-info w-full text-white text-lg"
+              id="btn-add-money"
+            >
+              Add Money
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- add money Section end-->
+
+      <!-- cashout Section start-->
+      <div class="mb-5">
+        <h2 class="font-semibold text-2xl mb-4">Cash Out</h2>
+        <form action="">
+          <div>
+            <label class="font-semibold" for="number">Agent Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Amount</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to withdraw"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="4"
+            />
+            <br /><br />
+            <button
+              type="submit"
+              class="btn btn-info w-full text-white text-lg"
+              id="btn-add-money"
+            >
+              Withdraw Money
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- cashout Section end-->
+
+      <!-- Transfer Section start-->
+      <div class="mb-5">
+        <h2 class="font-semibold text-2xl mb-4">Transfer Money</h2>
+        <form action="">
+          <div>
+            <label class="font-semibold" for="number">User Agent Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Amount</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to Transfer"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="4"
+            />
+            <br /><br />
+            <button
+              type="submit"
+              class="btn btn-info w-full text-white text-lg"
+              id="btn-add-money"
+            >
+              Send Now
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- Transfer Section end-->
+
+      <!-- bonus Section start-->
+      <div class="mb-5">
+        <h2 class="font-semibold text-2xl mb-4">Get Bonus</h2>
+        <form action="">
+          <div>
+            <label class="font-semibold" for="number">Enter Bonus Coupon</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter your Coupon"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="4"
+            />
+            <br /><br />
+            <button
+              type="submit"
+              class="btn btn-info w-full text-white text-lg"
+              id="btn-add-money"
+            >
+              Get Bonus
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- bonus Section end-->
+
+      <!-- paybill Section start-->
+      <div class="mb-5">
+        <h2 class="font-semibold text-2xl mb-4">Paybill</h2>
+        <form action="">
+          <div>
+            <h3 class="font-medium">Select to Pay</h3>
+            <select class="select bg-[#f4f5f7] border-0 mt-2 w-full">
+              <option>Select a bill</option>
+              <option>Gas</option>
+              <option>Electricity</option>
+              <option>Internet</option>
+            </select>
+            <br />
+            <br />
+            <label class="font-semibold" for="number"
+              >Biller Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit account number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Amount to Pay</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Add Amount to pay"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="11"
+            />
+            <br /><br />
+            <label class="font-semibold" for="number">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              maxlength="4"
+            />
+            <br /><br />
+            <button
+              type="submit"
+              class="btn btn-info w-full text-white text-lg"
+              id="btn-add-money"
+            >
+              Pay Now
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- paybill Section end-->
+
+      <!-- transaction section start -->
+      <!-- transaction section end -->
+    </section>
+
+    <script src="./home.js"></script>
+  </body>
+</html>

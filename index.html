@@ -32,7 +32,8 @@
           <input
             type="text"
             placeholder="Enter Your Number"
-            class="input bg-[#f4f5f7] border-0 mt-2"
+            class="input bg-[#f4f5f7] border-0 mt-2 w-full input-number"
+            maxlength="11"
           />
           <br /><br />
 
@@ -42,16 +43,20 @@
           <input
             type="text"
             placeholder="Enter 4 Digit Pin"
-            class="input bg-[#f4f5f7] border-0 mt-2"
-            class="input bg-[#f4f5f7]"
+            class="input bg-[#f4f5f7] border-0 mt-2 w-full input-pin"
+            maxlength="4"
           /><br /><br />
-          <button type="submit" class="btn btn-info w-full text-white text-lg">
+          <button
+            type="submit"
+            class="btn btn-info w-full text-white text-lg"
+            id="btn-login"
+          >
             Login
           </button>
         </form>
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
