@@ -35,10 +35,21 @@ const forEmptyFields = function (...inputs) {
   else return true;
 };
 
+//to get the inner text
+const getInnerValue = function (input) {
+  return parseFloat(input.innerText);
+};
+
+//to set inner text
+const setInnerText = function (value) {
+  currentBalance.innerText = value.toFixed(2);
+};
+
 //to get the input amount value
 const getInputAmount = function (input) {
   return parseFloat(input.value);
 };
+
 //to get the input pin value
 const getInputPin = function (input) {
   return parseInt(input.value);

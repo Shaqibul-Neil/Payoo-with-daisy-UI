@@ -31,9 +31,11 @@ btnWithdrawMoney.addEventListener("click", function (e) {
     alert(`Please provide a positive number`);
     return;
   }
-  const newCurrentBalance = parseFloat(currentBalance.innerText) - amount;
-  document.querySelector(".current-balance").innerText =
-    newCurrentBalance.toFixed(2);
+
+  //updating balance
+  const newCurrentBalance = getInnerValue(currentBalance) - amount;
+
+  setInnerText(newCurrentBalance);
 
   // clear input fields
   clearInputFields(inputWithdrawAccount, inputWithdrawAmount, inputWithdrawPin);

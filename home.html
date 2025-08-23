@@ -38,7 +38,7 @@
             <p>Available Balance</p>
           </div>
         </div>
-        <button class="logout btn">
+        <button class="logout btn rounded-2xl">
           <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
           Logout
         </button>
@@ -58,45 +58,45 @@
         <!-- operations buttons start -->
         <div class="tab-container grid grid-cols-3 gap-2 mb-5">
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--1 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--1 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="1"
           >
-            <img src="./assets/wallet1.png" alt="" class="mx-auto" />
+            <img src="./assets/wallet1.png" alt="" class="mx-auto mb-1" />
             Add Money
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--2 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--2 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="2"
           >
-            <img src="./assets/send1.png" alt="" class="mx-auto" />
+            <img src="./assets/send1.png" alt="" class="mx-auto mb-1" />
             Cashout
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--3 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--3 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="3"
           >
-            <img src="./assets/money1.png" alt="" class="mx-auto" />
+            <img src="./assets/money1.png" alt="" class="mx-auto mb-1" />
             Transfer Money
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--4 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--4 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="4"
           >
-            <img src="./assets/bonus1.png" alt="" class="mx-auto" />
+            <img src="./assets/bonus1.png" alt="" class="mx-auto mb-1" />
             Get Bonus
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--5 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--5 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="5"
           >
-            <img src="./assets/purse1.png" alt="" class="mx-auto" />
+            <img src="./assets/purse1.png" alt="" class="mx-auto mb-1" />
             Pay Bill
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--6 text-center p-2 w-full cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--6 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="6"
           >
-            <img src="./assets/transaction1.png" alt="" class="mx-auto" />
+            <img src="./assets/transaction1.png" alt="" class="mx-auto mb-1" />
             Transactions
           </div>
         </div>
@@ -114,7 +114,9 @@
         <form action="">
           <div>
             <h3 class="font-medium">Select a Bank</h3>
-            <select class="select bg-[#f4f5f7] border-0 mt-2 w-full">
+            <select
+              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+            >
               <option>Select a Bank</option>
               <option>AB Bank</option>
               <option>DBBL</option>
@@ -129,7 +131,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-account"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-account rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -138,7 +140,7 @@
             <input
               type="text"
               placeholder="Add Amount to add"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-amount"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-amount rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -147,13 +149,13 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-pin"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-pin rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
-              class="btn btn-info w-full text-white text-lg"
+              class="btn btn-info w-full text-white text-lg rounded-2xl"
               id="btn-add-money"
             >
               Add Money
@@ -175,7 +177,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-account"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-account rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -184,7 +186,7 @@
             <input
               type="text"
               placeholder="Add Amount to withdraw"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-amount"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-amount rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -193,13 +195,13 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-pin"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-withdraw-pin rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
-              class="btn btn-info w-full text-white text-lg"
+              class="btn btn-info w-full text-white text-lg rounded-2xl"
               id="btn-withdraw-money"
             >
               Withdraw Money
@@ -221,7 +223,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -230,7 +232,7 @@
             <input
               type="text"
               placeholder="Add Amount to Transfer"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -239,13 +241,13 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
-              class="btn btn-info w-full text-white text-lg"
+              class="btn btn-info w-full text-white text-lg rounded-2xl"
               id="btn-send-money"
             >
               Send Now
@@ -267,13 +269,13 @@
             <input
               type="text"
               placeholder="Enter your Coupon"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
-              class="btn btn-info w-full text-white text-lg"
+              class="btn btn-info w-full text-white text-lg rounded-2xl"
               id="btn-bonus-money"
             >
               Get Bonus
@@ -291,7 +293,9 @@
         <form action="">
           <div>
             <h3 class="font-medium">Select to Pay</h3>
-            <select class="select bg-[#f4f5f7] border-0 mt-2 w-full">
+            <select
+              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+            >
               <option>Select a bill</option>
               <option>Gas</option>
               <option>Electricity</option>
@@ -306,7 +310,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -315,7 +319,7 @@
             <input
               type="text"
               placeholder="Add Amount to pay"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -324,13 +328,13 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full"
+              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
-              class="btn btn-info w-full text-white text-lg"
+              class="btn btn-info w-full text-white text-lg rounded-2xl"
               id="btn-pay-money"
             >
               Pay Now
@@ -348,7 +352,9 @@
         <form action="">
           <div>
             <h3 class="font-medium">Select a Bank</h3>
-            <select class="select bg-[#f4f5f7] border-0 mt-2 w-full">
+            <select
+              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+            >
               <option>Select a Bank</option>
               <option>AB Bank</option>
               <option>DBBL</option>
@@ -403,5 +409,6 @@
     <script src="./js/add.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/cash.js"></script>
+    <script src="./js/transaction.js"></script>
   </body>
 </html>

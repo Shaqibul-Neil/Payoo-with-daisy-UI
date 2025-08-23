@@ -28,10 +28,11 @@ btnAddMoney.addEventListener("click", function (e) {
     alert(`You cant add more than $10000 at once`);
     return;
   }
-  //adding balance
-  const newCurrentBalance = parseFloat(currentBalance.innerText) + amount;
-  document.querySelector(".current-balance").innerText =
-    newCurrentBalance.toFixed(2);
+
+  //updating balance
+  const newCurrentBalance = getInnerValue(currentBalance) + amount;
+
+  setInnerText(newCurrentBalance);
 
   // clear input fields
   clearInputFields(inputAddAccount, inputAddAmount, inputAddPin);

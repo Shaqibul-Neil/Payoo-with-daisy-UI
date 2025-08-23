@@ -16,10 +16,10 @@ tabContainer.addEventListener("click", function (e) {
   if (!clicked) return;
 
   //removing active status from tab btn
-  tabBtns.forEach((tabBtn) => tabBtn.classList.remove("border-[#003396]"));
+  tabBtns.forEach((tabBtn) => tabBtn.classList.remove("bg-[#d4e7fc]"));
 
   //adding active status to tab btn
-  clicked.classList.add("border-[#003396]");
+  clicked.classList.add("bg-[#d4e7fc]");
 
   //hiding tab details
   tabDetails.forEach((tabDetail) => {
