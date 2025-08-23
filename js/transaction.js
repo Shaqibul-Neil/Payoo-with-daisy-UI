@@ -1,7 +1,7 @@
 //creating the html section
 btnShowTransaction.addEventListener("click", function () {
   //clearing movement container
-  containerMovements.innerHTML = "";
+  //containerMovements.innerHTML = "";
 
   movements.forEach((movement) => {
     //bg color change according to the type
