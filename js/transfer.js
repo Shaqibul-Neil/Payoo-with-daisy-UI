@@ -37,6 +37,14 @@ btnTransferMoney.addEventListener("click", function (e) {
 
   setInnerText(newCurrentBalance);
 
+  //adding to movements array
+  const movement = {
+    type: "Bank Transfer",
+    amount: amount,
+    date: new Date().toLocaleString(),
+  };
+  movements.push(movement);
+
   // clear input fields
   clearInputFields(inputTransferAccount, inputTransferAmount, inputTransferPin);
 

@@ -34,9 +34,18 @@ btnPayMoney.addEventListener("click", function (e) {
 
   setInnerText(newCurrentBalance);
 
-  // clear input fields
-  clearInputFields(inputPayAccount, inputAddAmount, inputPayPin);
+  //adding to movements array
+  const movement = {
+    type: `${inputPayType.value} Bill`,
+    amount: amount,
+    date: new Date().toLocaleString(),
+  };
+  movements.push(movement);
 
   //successful message
-  alert("Bill Payment successful!");
+  alert(`${inputPayType.value} Bill Payment successful!`);
+
+  // clear input fields
+  clearInputFields(inputPayAccount, inputPayAmount, inputPayPin);
+  inputPayType.value = "Select a bill";
 });

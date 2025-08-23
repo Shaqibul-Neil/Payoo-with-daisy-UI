@@ -34,8 +34,17 @@ btnAddMoney.addEventListener("click", function (e) {
 
   setInnerText(newCurrentBalance);
 
+  //adding to movements array
+  const movement = {
+    type: "Bank Deposit",
+    amount: amount,
+    date: new Date().toLocaleString(),
+  };
+  movements.push(movement);
+
   // clear input fields
   clearInputFields(inputAddAccount, inputAddAmount, inputAddPin);
+  inputBankType.value = "Select a Bank";
 
   //successful message
   alert("Add Money Successful!");

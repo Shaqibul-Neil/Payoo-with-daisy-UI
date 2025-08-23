@@ -61,42 +61,42 @@
             class="border-2 border-[#86CEFA] btns__tab btns__tab--1 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="1"
           >
-            <img src="./assets/wallet1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/Bank Deposit.png" alt="" class="mx-auto mb-1" />
             Add Money
           </div>
           <div
             class="border-2 border-[#86CEFA] btns__tab btns__tab--2 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="2"
           >
-            <img src="./assets/send1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/Cashout.png" alt="" class="mx-auto mb-1" />
             Cashout
           </div>
           <div
             class="border-2 border-[#86CEFA] btns__tab btns__tab--3 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="3"
           >
-            <img src="./assets/money1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/Bank Transfer.png" alt="" class="mx-auto mb-1" />
             Transfer Money
           </div>
           <div
             class="border-2 border-[#86CEFA] btns__tab btns__tab--4 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="4"
           >
-            <img src="./assets/bonus1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/Bonus.png" alt="" class="mx-auto mb-1" />
             Get Bonus
           </div>
           <div
             class="border-2 border-[#86CEFA] btns__tab btns__tab--5 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
             data-tab="5"
           >
-            <img src="./assets/purse1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/bill.png" alt="" class="mx-auto mb-1" />
             Pay Bill
           </div>
           <div
-            class="border-2 border-[#86CEFA] btns__tab btns__tab--6 text-center px-2 py-4 w-full rounded-2xl cursor-pointer"
+            class="border-2 border-[#86CEFA] btns__tab btns__tab--6 text-center px-2 py-4 w-full rounded-2xl cursor-pointer btn-show-transaction"
             data-tab="6"
           >
-            <img src="./assets/transaction1.png" alt="" class="mx-auto mb-1" />
+            <img src="./assets/transaction.png" alt="" class="mx-auto mb-1" />
             Transactions
           </div>
         </div>
@@ -115,7 +115,7 @@
           <div>
             <h3 class="font-medium">Select a Bank</h3>
             <select
-              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-bank-type bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
             >
               <option>Select a Bank</option>
               <option>AB Bank</option>
@@ -294,12 +294,12 @@
           <div>
             <h3 class="font-medium">Select to Pay</h3>
             <select
-              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc] input-pay-type"
             >
-              <option>Select a bill</option>
-              <option>Gas</option>
-              <option>Electricity</option>
-              <option>Internet</option>
+              <option disabled selected>Select a bill</option>
+              <option value="Gas">Gas</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Internet">Internet</option>
             </select>
             <br />
             <br />
@@ -348,58 +348,31 @@
       <div
         class="tab-detail tab-detail-6 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
       >
-        <h2 class="font-semibold text-2xl mb-4">Transaction History</h2>
-        <form action="">
-          <div>
-            <h3 class="font-medium">Select a Bank</h3>
-            <select
-              class="select bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
-            >
-              <option>Select a Bank</option>
-              <option>AB Bank</option>
-              <option>DBBL</option>
-              <option>Dutch Bangla</option>
-            </select>
-            <br />
-            <br />
-            <label class="font-semibold" for="number"
-              >Bank Account Number</label
-            >
-            <br />
-            <input
-              type="text"
-              placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-account"
-              maxlength="11"
-            />
-            <br /><br />
-            <label class="font-semibold" for="number">Amount to Add</label>
-            <br />
-            <input
-              type="text"
-              placeholder="Add Amount to add"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-amount"
-              maxlength="11"
-            />
-            <br /><br />
-            <label class="font-semibold" for="number">Pin Number</label>
-            <br />
-            <input
-              type="password"
-              placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full input-add-pin"
-              maxlength="4"
-            />
-            <br /><br />
-            <button
-              type="submit"
-              class="btn btn-info w-full text-white text-lg"
-              id="btn-add-money"
-            >
-              Add Money
-            </button>
-          </div>
-        </form>
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-semibold text-2xl">Transaction History</h2>
+          <a class="text-[#1f82f3]" href="#">View All</a>
+        </div>
+
+        <!-- movements -->
+        <div class="movements-container">
+          <!-- <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-white flex justify-center items-center w-10 h-10 rounded-full"
+              >
+                <img src="assets/bill.png" alt="" class="text-center w-6 h-6" />
+              </div>
+              <div>
+                <h4 class="font-medium">Electricity Bill</h4>
+                <h5>$4000</h5>
+                <h5>Today at 01:44 AM</h5>
+              </div>
+            </div>
+            <div>
+              <i class="fa-solid fa-ellipsis-vertical text-2xl"></i>
+            </div>
+          </div> -->
+        </div>
       </div>
       <!-- transaction section end -->
     </section>

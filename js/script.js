@@ -4,7 +4,7 @@ const inputNumber = document.querySelector(".input-number");
 const inputPin = document.querySelector(".input-pin");
 const currentBalance = document.querySelector(".current-balance");
 
-const selectBank = document.querySelector(".select");
+const inputBankType = document.querySelector(".input-bank-type");
 const inputAddAccount = document.querySelector(".input-add-account");
 const inputAddAmount = document.querySelector(".input-add-amount");
 const inputAddPin = document.querySelector(".input-add-pin");
@@ -20,6 +20,7 @@ const inputTransferAmount = document.querySelector(".input-transfer-amount");
 const inputTransferPin = document.querySelector(".input-transfer-pin");
 const btnTransferMoney = document.querySelector("#btn-transfer-money");
 
+const inputPayType = document.querySelector(".input-pay-type");
 const inputPayAccount = document.querySelector(".input-pay-account");
 const inputPayAmount = document.querySelector(".input-pay-amount");
 const inputPayPin = document.querySelector(".input-pay-pin");
@@ -29,9 +30,13 @@ const tabContainer = document.querySelector(".tab-container");
 const tabBtns = document.querySelectorAll(".btns__tab");
 const tabDetails = document.querySelectorAll(".tab-detail");
 
+const containerMovements = document.querySelector(".movements-container");
+const btnShowTransaction = document.querySelector(".btn-show-transaction");
+
 //variables
 const mobileNumber = 12345678901;
 const pinNumber = 1234;
+const movements = [];
 
 //clear input fields
 const clearInputFields = function (...inputs) {
