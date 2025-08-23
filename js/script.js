@@ -12,6 +12,9 @@ const inputWithdrawAccount = document.querySelector(".input-withdraw-account");
 const inputWithdrawAmount = document.querySelector(".input-withdraw-amount");
 const inputWithdrawPin = document.querySelector(".input-withdraw-pin");
 const btnWithdrawMoney = document.querySelector("#btn-withdraw-money");
+const tabContainer = document.querySelector(".tab-container");
+const tabBtns = document.querySelectorAll(".btns__tab");
+const tabDetails = document.querySelectorAll(".tab-detail");
 
 //variables
 const mobileNumber = 12345678901;
@@ -30,4 +33,13 @@ const forEmptyFields = function (...inputs) {
     alert("Please fill up all the information");
   } //all fields filled
   else return true;
+};
+
+//to get the input amount value
+const getInputAmount = function (input) {
+  return parseFloat(input.value);
+};
+//to get the input pin value
+const getInputPin = function (input) {
+  return parseInt(input.value);
 };

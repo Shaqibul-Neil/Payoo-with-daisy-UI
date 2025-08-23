@@ -1,9 +1,4 @@
 //tab functionality
-//elements
-const tabContainer = document.querySelector(".tab-container");
-const tabBtns = document.querySelectorAll(".btns__tab");
-const tabDetails = document.querySelectorAll(".tab-detail");
-
 tabDetails.forEach((tabDetail) =>
   tabDetail.classList.add(
     "max-h-0",
@@ -33,7 +28,6 @@ tabContainer.addEventListener("click", function (e) {
   });
 
   const clickedDataset = clicked.dataset.tab;
-  console.log(clickedDataset);
 
   //show clicked tab
   const clickedTab = document.querySelector(`.tab-detail-${clickedDataset}`);

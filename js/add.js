@@ -2,6 +2,9 @@
 btnAddMoney.addEventListener("click", function (e) {
   e.preventDefault();
 
+  const amount = getInputAmount(inputAddAmount);
+  const inputPin = getInputPin(inputAddPin);
+
   //for empty fields
   if (!forEmptyFields(inputAddAccount, inputAddAmount, inputAddPin)) return;
 
@@ -11,26 +14,22 @@ btnAddMoney.addEventListener("click", function (e) {
     return;
   }
   //pin doesn't match
-  if (parseInt(inputAddPin.value) !== pinNumber) {
+  if (inputPin !== pinNumber) {
     alert(`Please provide a valid pin number`);
     return;
   }
   //amount <=0
-  if (
-    parseFloat(inputAddAmount.value) <= 0 ||
-    isNaN(parseFloat(inputAddAmount.value))
-  ) {
+  if (amount <= 0 || isNaN(amount)) {
     alert(`Please Provide a positive number to add`);
     return;
   }
   //amount>10000
-  if (parseFloat(inputAddAmount.value) > 10000) {
+  if (amount > 10000) {
     alert(`You cant add more than $10000 at once`);
     return;
   }
   //adding balance
-  const newCurrentBalance =
-    parseFloat(currentBalance.innerText) + parseFloat(inputAddAmount.value);
+  const newCurrentBalance = parseFloat(currentBalance.innerText) + amount;
   document.querySelector(".current-balance").innerText =
     newCurrentBalance.toFixed(2);
 
