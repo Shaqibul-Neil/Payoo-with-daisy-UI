@@ -223,7 +223,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-transfer-account bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -232,7 +232,7 @@
             <input
               type="text"
               placeholder="Add Amount to Transfer"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-transfer-amount bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -241,14 +241,14 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-transfer-pin bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
             <button
               type="submit"
               class="btn btn-info w-full text-white text-lg rounded-2xl"
-              id="btn-send-money"
+              id="btn-transfer-money"
             >
               Send Now
             </button>
@@ -310,7 +310,7 @@
             <input
               type="text"
               placeholder="Enter 11 digit account number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-pay-account bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -319,7 +319,7 @@
             <input
               type="text"
               placeholder="Add Amount to pay"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-pay-amount bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="11"
             />
             <br /><br />
@@ -328,7 +328,7 @@
             <input
               type="password"
               placeholder="Enter 4 digit pin number"
-              class="input bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
+              class="input input-pay-pin bg-[#f4f5f7] border-0 mt-2 w-full rounded-2xl focus:outline-0 focus:bg-[#d4e7fc]"
               maxlength="4"
             />
             <br /><br />
@@ -409,6 +409,9 @@
     <script src="./js/add.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/cash.js"></script>
+    <script src="./js/transfer.js"></script>
+    <script src="./js/bonus.js"></script>
+    <script src="./js/paybill.js"></script>
     <script src="./js/transaction.js"></script>
   </body>
 </html>
