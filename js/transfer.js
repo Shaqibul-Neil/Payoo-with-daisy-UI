@@ -13,22 +13,26 @@ btnTransferMoney.addEventListener("click", function (e) {
   //account number less than 11
   if (inputTransferAccount.value.length < 11) {
     alert(`Please provide valid account number`);
+    clearInputFields(inputTransferAccount);
     return;
   }
   //pin doesn't match
   if (inputPin !== pinNumber) {
     alert(`Please provide a valid pin number`);
+    clearInputFields(inputTransferPin);
     return;
   }
   //amount more than current balance
-  if (amount > parseFloat(currentBalance.innerText)) {
+  if (amount > getInnerValue(currentBalance)) {
     alert(`You cant transfer more than your balance`);
+    clearInputFields(inputTransferAmount);
     return;
   }
 
   //amount <=0
   if (amount <= 0) {
     alert(`Please provide a positive number`);
+    clearInputFields(inputTransferAmount);
     return;
   }
 

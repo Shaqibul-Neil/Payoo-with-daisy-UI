@@ -11,21 +11,25 @@ btnAddMoney.addEventListener("click", function (e) {
   //account number less than 11
   if (inputAddAccount.value.length < 11) {
     alert(`Please provide valid account number`);
+    clearInputFields(inputAddAccount);
     return;
   }
   //pin doesn't match
   if (inputPin !== pinNumber) {
     alert(`Please provide a valid pin number`);
+    clearInputFields(inputAddPin);
     return;
   }
   //amount <=0
   if (amount <= 0 || isNaN(amount)) {
     alert(`Please Provide a positive number to add`);
+    clearInputFields(inputAddAmount);
     return;
   }
   //amount>10000
   if (amount > 10000) {
     alert(`You cant add more than $10000 at once`);
+    clearInputFields(inputAddAmount);
     return;
   }
 

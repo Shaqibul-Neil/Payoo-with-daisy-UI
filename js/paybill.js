@@ -6,26 +6,30 @@ btnPayMoney.addEventListener("click", function (e) {
   const inputPin = getInputPin(inputPayPin);
 
   //for empty fields
-  if (!forEmptyFields(inputPayAccount, inputPayAmount, inputPayPin)) return;
+  if (!forEmptyFields(inputPayAccount, inputPayAmount, inputPin)) return;
   //account number less than 11
   if (inputPayAccount.value.length < 11) {
     alert(`Please provide valid account number`);
+    clearInputFields(inputPayAccount);
     return;
   }
   //pin doesn't match
   if (inputPin !== pinNumber) {
     alert(`Please provide a valid pin number`);
+    clearInputFields(inputPayPin);
     return;
   }
   //amount more than current balance
-  if (amount > parseFloat(currentBalance.innerText)) {
+  if (amount > getInnerValue(currentBalance)) {
     alert(`You cant pay more than your balance`);
+    clearInputFields(inputPayAmount);
     return;
   }
 
   //amount <=0
   if (amount <= 0) {
     alert(`Please provide a positive number`);
+    clearInputFields(inputPayAmount);
     return;
   }
 

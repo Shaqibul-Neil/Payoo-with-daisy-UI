@@ -13,22 +13,26 @@ btnWithdrawMoney.addEventListener("click", function (e) {
   //account number less than 11
   if (inputWithdrawAccount.value.length < 11) {
     alert(`Please provide valid account number`);
+    clearInputFields(inputWithdrawAccount);
     return;
   }
   //pin doesn't match
   if (inputPin !== pinNumber) {
     alert(`Please provide a valid pin number`);
+    clearInputFields(inputWithdrawPin);
     return;
   }
   //amount more than current balance
-  if (amount > parseFloat(currentBalance.innerText)) {
+  if (amount > getInnerValue(currentBalance)) {
     alert(`You cant withdraw more than your balance`);
+    clearInputFields(inputWithdrawAmount);
     return;
   }
 
   //amount <=0
   if (amount <= 0) {
     alert(`Please provide a positive number`);
+    clearInputFields(inputWithdrawAmount);
     return;
   }
 
